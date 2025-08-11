@@ -1,0 +1,17 @@
+{
+  "name": "browser-extension-manager-ui",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.1.11",
+    "tailwindcss": "^4.1.11",
+    "vite": "^7.1.0",
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
