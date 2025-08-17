@@ -5,10 +5,37 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+
   </head>
-  <body>
-    <div id="app"></div>
+<body class="center max-w-[1350px] mx-auto bg-dark-gradient text-white text-[16px] font-sans min-h-screen">
+   <div id="app"></div>
+
+    <div class="flex justify-center p-5">
+      <div class="flex p-4 justify-between rounded-[15px] items-center w-full h-[65px] bg-neutral-700">
+        <img src="/images/logo.svg" alt="Logo">
+        <button id="theme-toggle">
+          <img class="cursor-pointer rounded-[7px] p-2 w-10 h-10 bg-neutral-600 hover:bg-neutral-500 transition-colors" src="/public/images/icon-sun.svg" alt="">
+        </button>
+      </div>
+    </div>
+
+    <div class="flex flex-col gap-3 md:flex-row  justify-between p-5 w-full">
+      <div class="flex justify-center items-center">
+        <h1 class="text-3xl font-bold">Extensions List</h1>
+      </div>
+
+      <section class="flex justify-center items-center gap-3">
+        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="all" data-selected>All</button>
+        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="active">Active</button>
+        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="inactive">Inactive</button>
+      </section>
+    </div>
+
+  <section>
+    <div id="cardsContainer"
+         class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"></div>
+  </section>
+  
     <script type="module" src="/src/main.js"></script>
   </body>
 </html>

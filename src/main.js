@@ -1,5 +1,9 @@
-document.querySelector('#app').innerHTML = `
-  <h1 class="text-3xl font-bold underline">
-    Hello Vite + JS!
-  </h1>
-`;
+import { loadData } from "./js/state.js"
+import { renderExtensions } from "./js/dom.js"
+
+const init = async () => {
+  await loadData()
+  renderExtensions()
+}
+
+init()
