@@ -16,7 +16,6 @@ export const renderExtensions = () => {
       <p class="text-sm text-neutral-300">${item.description}</p>
     </div>
   </div>
-
   <div class="flex justify-between mt-4">
     <button class="cursor-pointer px-5 py-2 bg-neutral-700 text-white rounded-[20px] border border-neutral-600 hover:bg-neutral-500 transition-colors">
       Remove
@@ -27,9 +26,6 @@ export const renderExtensions = () => {
     </label>
   </div>
 </div>
-
-
-      
     `
     container.insertAdjacentHTML('beforeend', card)
   })
