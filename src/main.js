@@ -1,11 +1,11 @@
-import { loadData } from "./js/state.js"
 import { renderExtensions } from "./js/dom.js"
 import { setThemeToggle } from "./js/events.js"
+import { setFilter } from "./js/events.js";
 
-const init = async () => {
-  await loadData()
+const init = () => {
   renderExtensions()
   setThemeToggle()
+  setFilter()
 }
 
-await init()
+init()

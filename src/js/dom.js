@@ -17,7 +17,7 @@ export const renderExtensions = () => {
     </div>
   </div>
   <div class="flex justify-between mt-4">
-    <button class="cursor-pointer px-5 py-2 bg-neutral-700 text-white rounded-[20px] border border-neutral-600 hover:bg-neutral-500 transition-colors">
+    <button id="remove" class="cursor-pointer px-5 py-2 bg-neutral-700 text-white rounded-[20px] border border-neutral-600 hover:bg-neutral-500 transition-colors">
       Remove
     </button>
     <label class="relative inline-flex items-center cursor-pointer">
@@ -30,4 +30,6 @@ export const renderExtensions = () => {
     container.insertAdjacentHTML('beforeend', card)
   })
 }
+
+renderExtensions()
 

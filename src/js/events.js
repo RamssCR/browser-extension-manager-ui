@@ -2,7 +2,8 @@ export const setThemeToggle = () => {
   const themeButton = document.querySelector('#theme-toggle')
  
   if (themeButton) {
-    themeButton.addEventListener('click', () => {
+themeButton.addEventListener('click', toggleTheme)
+    themeButton.addEventListener('change', () => {
       toggleTheme()
     })
   }
@@ -76,3 +77,56 @@ const toggleTheme = () => {
     }
   })
 }
+
+export const setFilter = () => {
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const cardsContainer = document.querySelector('#cardsContainer');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filterValue = button.getAttribute('data-filter');
+      const cards = cardsContainer.children;
+
+      Array.from(cards).forEach(card => {
+        card.style.display = 'none';
+      });
+
+      filterButtons.forEach(btn => {
+        btn.removeAttribute('data-selected');
+      });
+
+      if (filterValue === 'all') {
+        Array.from(cards).forEach(card => {
+          card.style.display = 'block';
+        });
+        document.getElementById('all').setAttribute('data-selected', '');
+      } 
+      else if (filterValue === 'active') {
+        let algunoActivo = false;
+        Array.from(cards).forEach(card => {
+          const isActive = card.querySelector('input[type="checkbox"]').checked;
+          if (isActive) {
+            card.style.display = 'block';
+            algunoActivo = true;
+          }
+        });
+        if (algunoActivo) {
+          document.getElementById('active').setAttribute('data-selected', '');
+        }
+      } 
+      else if (filterValue === 'inactive') {
+        let algunoInactivo = false;
+        Array.from(cards).forEach(card => {
+          const isActive = card.querySelector('input[type="checkbox"]').checked;
+          if (!isActive) {
+            card.style.display = 'block';
+            algunoInactivo = true;
+          }
+        });
+        if (algunoInactivo) {
+          document.getElementById('inactive').setAttribute('data-selected', '');
+        }
+      }
+    });
+  });
+};

@@ -1,8 +1,5 @@
-export const state = {
-  extensions: []
-}
+import data from "@data/data.json"
 
-export const loadData = async () => {
-  const res = await fetch('./src/data/data.json')
-  state.extensions = await res.json()
+export const state = {
+  extensions: data
 }

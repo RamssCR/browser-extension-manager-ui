@@ -5,6 +5,7 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <link rel="stylesheet" href="/src/style.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend Mentor | Browser Exxtension Manager UI</title>
 
   </head>
 <body class="center max-w-[1350px] md:min-h-[1000px] mx-auto bg-dark-gradient text-white text-[16px] font-family-sans min-h-screen">
@@ -12,7 +13,9 @@
 
     <div class="flex justify-center p-5">
       <div class="header flex p-4 justify-between rounded-[15px] items-center w-full h-[65px] bg-neutral-700">
-        <img src="/images/logo.svg" alt="Logo">
+        <img src="/images/logo.svg" alt="Logo"
+        aria-hidden="true"
+        />
         <button id="theme-toggle">
           <img class="cursor-pointer rounded-[7px] p-2 w-10 h-10 bg-neutral-600 hover:bg-neutral-500 transition-colors" src="/public/images/icon-sun.svg" alt="">
         </button>
@@ -21,13 +24,13 @@
 
     <div class="flex flex-col gap-3 md:flex-row  justify-between p-5 w-full">
       <div class="flex justify-center items-center">
-        <h1 class="Extensionslist text-3xl font-bold">Extensions List</h1>
+        <h1 class="text-3xl font-bold">Extensions List</h1>
       </div>
 
       <section class="flex justify-center items-center gap-3">
-        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="all">All</button>
-        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="active">Active</button>
-        <button class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="inactive">Inactive</button>
+        <button id="all" class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-selected data-filter="all">All</button>
+        <button id="active" class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="active">Active</button>
+        <button id="inactive" class="filter-btn cursor-pointer px-5 py-2 bg-neutral-600 text-white rounded-[20px] hover:bg-neutral-500 data-[selected]:bg-red-400 transition-colors" data-filter="inactive">Inactive</button>
       </section>
     </div>
 
