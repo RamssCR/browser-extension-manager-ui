@@ -1,5 +1,11 @@
-document.querySelector('#app').innerHTML = `
-  <h1 class="text-3xl font-bold underline">
-    Hello Vite + JS!
-  </h1>
-`;
+import { renderExtensions } from "./js/dom.js"
+import { setThemeToggle } from "./js/events.js"
+import { setFilter } from "./js/events.js";
+
+const init = () => {
+  renderExtensions()
+  setThemeToggle()
+  setFilter()
+}
+
+init()
